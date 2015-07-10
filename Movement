@@ -1,0 +1,24 @@
+//Here Lies Future Code! [Note This Is For Unity]
+
+//Possible Types of Movement
+
+//Applying Velocity to an object on a key stroke
+
+//First Remember to Apply a RigidBody2D to the object you are putting into motion
+
+	public float JumpHeight;    // This allows the jump height to be altered in the Unity Window for easy changes
+	public float MovementSpeed; // This allows the Movespeed to be altered in the Unity Window for easy changes
+
+	// Update is called once per frame
+	void Update () {
+	
+	//NOTE the KeyCode can be changed to whatever you desire
+		if (Input.GetKeyDown (KeyCode.D)) {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (MovementSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+		}
+
+
+	}
+}
+
+
