@@ -17,8 +17,14 @@
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (MovementSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
 		if (Input.GetKeyDown (KeyCode.A)) {
-			GetComponenet<RigidBody2D> ().velocity = new Vector2 (-MovementSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			GetComponent<RigidBody2D> ().velocity = new Vector2 (-MovementSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
+		
+	//Jumping Mechanic
+	if (Input.GetKeyDown (KeyCode.W)) {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, JumpHeight);
+		}
+	
 
 
 	}
